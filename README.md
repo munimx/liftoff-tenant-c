@@ -1,2 +1,3 @@
 # liftoff-tenant-c
-# liftoff-tenant-c \ newline
+
+live-logs test 1

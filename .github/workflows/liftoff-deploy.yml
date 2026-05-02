@@ -24,9 +24,9 @@ jobs:
         run: |
           docker build \
             -f Dockerfile \
-            -t registry.digitalocean.com/liftoff/tenant-c-phase-6/test:$IMAGE_TAG \
+            -t registry.digitalocean.com/liftoff/log-stream-test/test:$IMAGE_TAG \
             .
-          docker push registry.digitalocean.com/liftoff/tenant-c-phase-6/test:$IMAGE_TAG
+          docker push registry.digitalocean.com/liftoff/log-stream-test/test:$IMAGE_TAG
 
       - name: Notify Liftoff
         env:
@@ -35,4 +35,4 @@ jobs:
           curl -X POST https://aniya-preservable-harriett.ngrok-free.dev/api/v1/webhooks/deploy-complete \
             -H "X-Liftoff-Secret: ${{ secrets.LIFTOFF_DEPLOY_SECRET }}" \
             -H "Content-Type: application/json" \
-            -d "{\"environmentId\":\"cmoo5gln6000aawq742dcwalr\",\"imageUri\":\"registry.digitalocean.com/liftoff/tenant-c-phase-6/test:$IMAGE_TAG\",\"commitSha\":\"$GITHUB_SHA\"}"
+            -d "{\"environmentId\":\"cmoogcglq0007gxqhheugno7j\",\"imageUri\":\"registry.digitalocean.com/liftoff/log-stream-test/test:$IMAGE_TAG\",\"commitSha\":\"$GITHUB_SHA\"}"

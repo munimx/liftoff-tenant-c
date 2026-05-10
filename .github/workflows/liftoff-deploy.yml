@@ -38,4 +38,4 @@ jobs:
           curl -X POST https://aniya-preservable-harriett.ngrok-free.dev/api/v1/webhooks/deploy-complete \
             -H "X-Liftoff-Secret: ${{ secrets.LIFTOFF_DEPLOY_SECRET }}" \
             -H "Content-Type: application/json" \
-            -d "{\"environmentId\":\"cmozn60cr0009lk0l44vh4ps1\",\"imageUri\":\"registry.digitalocean.com/liftoff/test/prod:$IMAGE_TAG\",\"commitSha\":\"$GITHUB_SHA\",\"status\":\"$JOB_STATUS\",\"runUrl\":\"$RUN_URL\"}"
+            -d "{\"environmentId\":\"cmoznf4qx000911zjwcpvrxad\",\"imageUri\":\"registry.digitalocean.com/liftoff/test/prod:$IMAGE_TAG\",\"commitSha\":\"$GITHUB_SHA\",\"status\":\"$JOB_STATUS\",\"runUrl\":\"$RUN_URL\"}"
